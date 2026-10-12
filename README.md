@@ -8,7 +8,7 @@
 
 * **Nome:** Jean Gustavo
 * **Localização:** Fortaleza - CE, Brasil
-* **Formação:** Graduação em Tecnologia — **UniAteneu**
+* **Formação:** Graduação em Analise e Desenvolvimento de sistemas — **UniAteneu**
 * **Projeto de Destaque:** **GeoMentor** — plataforma com foco em Geologia e Geociências, integrando tecnologia, interface interativa e ferramentas educacionais.
 * **GitHub:** [@JeanGust4](https://github.com/JeanGust4)
 * **Contato:** `jgustavoscosta@gmail.com` · WhatsApp: `(85) 9 9291-6033`
