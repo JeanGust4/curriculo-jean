@@ -1,0 +1,179 @@
+﻿@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  margin-top: var(--space-xl);
+}
+
+.experiencia {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  &__titulo {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.2em;
+      background: var(--accent);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-glow);
+    }
+  }
+
+  &__subtitulo {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    @include glass(16px, 0.04);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    &--destaque {
+      border-color: var(--accent-glow);
+      background: linear-gradient(135deg, rgba(0, 210, 255, 0.06), rgba(17, 24, 39, 0.8));
+
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      &::after {
+        content: 'PROJETO PRINCIPAL';
+        position: absolute;
+        top: var(--space-md);
+        right: var(--space-md);
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        background: rgba(0, 210, 255, 0.12);
+        border: 1px solid var(--accent);
+        padding: 3px 8px;
+        border-radius: var(--radius-full);
+      }
+    }
+
+    &-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    &-periodo {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    &-tipo {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: capitalize;
+    }
+
+    &-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: var(--space-xs);
+    }
+
+    &-org {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    &-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: var(--space-xs);
+      flex-grow: 1;
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: var(--space-xs);
+      align-self: flex-start;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      background: rgba(0, 210, 255, 0.08);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      transition: all var(--transition-fast);
+
+      &:hover {
+        background: rgba(0, 210, 255, 0.16);
+        border-color: var(--accent);
+        box-shadow: 0 0 12px var(--accent-glow);
+        transform: translateX(2px);
+      }
+    }
+
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--border-card);
+    }
+
+    &-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-card);
+    }
+  }
+}

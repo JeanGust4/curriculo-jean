@@ -1,0 +1,53 @@
+﻿<footer class="contato">
+  <div class="contato__card">
+    <div class="contato__info">
+      <span class="contato__localizacao">📍 {{ localizacao() }}</span>
+      <h2 class="contato__chamada">Vamos conversar ou construir algo juntos?</h2>
+      <p class="contato__descricao">
+        Estou disponível para novas oportunidades, projetos de software e trocas de experiências.
+      </p>
+    </div>
+
+    <div class="contato__acoes">
+      <a
+        [href]="whatsappUrl()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contato__btn contato__btn--whatsapp"
+        aria-label="Conversar no WhatsApp">
+        <span class="contato__whatsapp-icon" aria-hidden="true">💬</span>
+        <span>WhatsApp: {{ telefone() }}</span>
+        <span class="contato__seta" aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        type="button"
+        class="contato__btn contato__btn--copiar"
+        [class.contato__btn--copiado]="copiado()"
+        (click)="copiarEmail()"
+        aria-label="Copiar endereço de e-mail">
+        @if (copiado()) {
+          <span class="contato__btn-content">✓ E-mail Copiado!</span>
+        } @else {
+          <span class="contato__btn-content">📋 {{ email() }}</span>
+        }
+      </button>
+
+      <a
+        [href]="githubUrl()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contato__btn contato__btn--github"
+        aria-label="Visitar perfil no GitHub">
+        <span class="contato__github-icon" aria-hidden="true">🐙</span>
+        <span>github.com/{{ githubUsername() }}</span>
+        <span class="contato__seta" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="contato__rodape">
+    <p>© 2026 Jean Gustavo · Fortaleza/CE</p>
+    <p class="contato__stack-tag">Desenvolvido com Angular 22 · TypeScript · SCSS</p>
+  </div>
+</footer>

@@ -1,0 +1,34 @@
+﻿<section class="skills">
+  <div class="skills__header">
+    <h2 class="skills__titulo">Habilidades Técnicas & Competências</h2>
+    <p class="skills__subtitulo">Filtre por categoria para explorar meu stack e ferramentas</p>
+  </div>
+
+  <!-- Botões de Filtro -->
+  <div class="skills__filtros" role="tablist" aria-label="Filtro de habilidades">
+    @for (cat of categorias(); track cat) {
+      <button
+        type="button"
+        class="skills__filtro-btn"
+        [class.skills__filtro-btn--ativo]="filtroAtivo() === cat"
+        (click)="setFiltro(cat)">
+        {{ cat }}
+      </button>
+    }
+  </div>
+
+  <!-- Tags / Pills Grid -->
+  <div class="skills__pills">
+    @for (skill of skillsFiltradas(); track skill.nome) {
+      <div class="skills__pill">
+        @if (skill.icone) {
+          <span class="skills__pill-icon" aria-hidden="true">{{ skill.icone }}</span>
+        }
+        <span class="skills__pill-nome">{{ skill.nome }}</span>
+        <span class="skills__pill-badge">{{ skill.categoria }}</span>
+      </div>
+    } @empty {
+      <p class="skills__vazio">Nenhuma habilidade cadastrada para esta categoria.</p>
+    }
+  </div>
+</section>

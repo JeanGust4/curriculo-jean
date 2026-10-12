@@ -1,0 +1,43 @@
+﻿<section class="experiencia">
+  <div class="experiencia__header">
+    <h2 class="experiencia__titulo">Trajetória & Conquistas</h2>
+    <p class="experiencia__subtitulo">Projetos autorais, formação acadêmica e evolução prática</p>
+  </div>
+
+  <div class="experiencia__grid">
+    @for (item of experiencias(); track item.id) {
+      <article
+        class="experiencia__card"
+        [class.experiencia__card--destaque]="item.destaque">
+        <div class="experiencia__card-topo">
+          <span class="experiencia__card-periodo">{{ item.periodo }}</span>
+          <span class="experiencia__card-tipo">{{ item.tipo }}</span>
+        </div>
+
+        <h3 class="experiencia__card-titulo">{{ item.titulo }}</h3>
+        <p class="experiencia__card-org">{{ item.organizacao }}</p>
+        <p class="experiencia__card-desc">{{ item.descricao }}</p>
+
+        @if (item.link) {
+          <a
+            [href]="item.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="experiencia__card-link"
+            aria-label="Ver projeto GeoMentor no GitHub">
+            <span>Ver no GitHub (JeanGust4)</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        }
+
+        @if (item.tecnologias && item.tecnologias.length > 0) {
+          <div class="experiencia__card-tags">
+            @for (tech of item.tecnologias; track tech) {
+              <span class="experiencia__card-tag">{{ tech }}</span>
+            }
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>
