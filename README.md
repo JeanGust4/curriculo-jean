@@ -1,59 +1,70 @@
-# CurriculoJean
+﻿# ⚡️ Currículo Digital Interativo — Jean Gustavo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+> Aplicação SPA moderna, reativa e de alta performance desenvolvida com **Angular 22**, **TypeScript**, **SCSS** e **Signals**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 👨‍💻 Sobre o Desenvolvedor
+
+* **Nome:** Jean Gustavo
+* **Localização:** Fortaleza - CE, Brasil
+* **Formação:** Graduação em Tecnologia — **UniAteneu**
+* **Projeto de Destaque:** **GeoMentor** — plataforma com foco em Geologia e Geociências, integrando tecnologia, interface interativa e ferramentas educacionais.
+* **GitHub:** [@JeanGust4](https://github.com/JeanGust4)
+* **Contato:** `jgustavoscosta@gmail.com` · WhatsApp: `(85) 9 9291-6033`
+
+---
+
+## 🚀 Tecnologias & Conceitos Aplicados
+
+* **Angular 22 (Standalone Components):** Arquitetura moderna sem dependência de `NgModule`.
+* **Reatividade com Signals & Computed:** Gerenciamento de estado síncrono, previsível e sem overhead.
+* **Novo Control Flow do Angular:** Sintaxe nativa `@for`, `@if` e `@empty` com rastreamento obrigatório (`track`).
+* **ChangeDetectionStrategy.OnPush:** Otimização de renderização onde o Angular só recalcula nós que sofreram mutação em seus signals.
+* **Design System & SCSS:**
+  * Design tokens globais (variáveis CSS) com paleta Dark Slate e Azul Elétrico Neon.
+  * Efeito translúcido **Glassmorphism** com `backdrop-filter`.
+  * Metodologia BEM para nomenclatura modular de classes.
+  * Breakpoints e tipografia fluida com `clamp()`.
+* **Clipboard API Nativa:** Cópia rápida de endereço de e-mail com microinteração de feedback dinâmico.
+
+---
+
+## 💻 Como Rodar o Projeto Localmente
+
+### Pré-requisitos
+* **Node.js** (v20 ou superior)
+* **npm** (v10 ou superior)
+* **Angular CLI** (v22 ou superior)
+
+### Passo a Passo
 
 ```bash
+# 1. Clonar o repositório
+git clone https://github.com/JeanGust4/curriculo-jean.git
+
+# 2. Entrar na pasta do projeto
+cd curriculo-jean
+
+# 3. Instalar as dependências
+npm install
+
+# 4. Iniciar o servidor de desenvolvimento
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse no seu navegador: `http://localhost:4200/`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 📦 Build para Produção
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os artefatos otimizados e minificados serão gerados no diretório `dist/curriculo-jean/`.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvido por **Jean Gustavo** · 2026.
